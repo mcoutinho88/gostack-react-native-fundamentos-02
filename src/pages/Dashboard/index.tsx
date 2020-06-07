@@ -42,12 +42,9 @@ const Dashboard: React.FC = () => {
     loadProducts();
   }, []);
 
-  const handleAddToCart = useCallback(
-    async (item: Product) => {
-      await addToCart(item);
-    },
-    [addToCart],
-  );
+  function handleAddToCart(item: Product): void {
+    addToCart(item);
+  }
 
   return (
     <Container>
